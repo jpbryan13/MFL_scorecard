@@ -70,7 +70,7 @@
 										var movie_title = json[name]['Movie '+i.toString()]
 										document.getElementById('Movie '+i.toString()).innerHTML = json[name][movie_title]
 										console.log(json_s[movie_title]['Total Points'])
-										var movie_score_str = 'Movie '+i.toString()+'score'
+										var movie_score_str = 'Movie '+i.toString()+' score'
 										console.log(movie_score_str)
 										document.getElementById(movie_score_str).innerHTML = 50
 									}
