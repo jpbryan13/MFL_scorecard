@@ -13,6 +13,37 @@
 				<h2 id='username'></h2>
 				<h3 id='score'></h3>
 				<h3 id='rank'></h3>
+				<table>
+					<tr>
+						<th id='Movie 1'></th>
+						<th id='Movie 2'></th>
+						<th id='Movie 3'></th>
+						<th id='Movie 4'></th>
+						<th id='Movie 5'></th>
+						<th id='Movie 6'></th>
+						<th id='Movie 7'></th>
+						<th id='Movie 8'></th>
+					</tr>
+					<tr>
+						<td id='Movie 1 score'></td>
+						<td id='Movie 2 score'></td>
+						<td id='Movie 3 score'></td>
+						<td id='Movie 4 score'></td>
+						<td id='Movie 5 score'></td>
+						<td id='Movie 6 score'></td>
+						<td id='Movie 7 score'></td>
+						<td id='Movie 8 score'></td>
+					</tr>
+					<tr>
+						<td id='Movie 1 breakdown'></td>
+						<td id='Movie 2 breakdown'></td>
+						<td id='Movie 3 breakdown'></td>
+						<td id='Movie 4 breakdown'></td>
+						<td id='Movie 5 breakdown'></td>
+						<td id='Movie 6 breakdown'></td>
+						<td id='Movie 7 breakdown'></td>
+						<td id='Movie 8 breakdown'></td>
+					</tr>
 				<script>
 					async function changeScore(name){
 						const url = "./mfl_rosters.json"
@@ -24,11 +55,17 @@
 							const json = await response.json()
 							try {
 								console.log(json[name])
-								document.getElementById('username').innerHTML = 'Username: '+json[name]
-								document.getElementById('score').innerHTML = 'Approximate score: '+json[name]['score_12_12']
-								document.getElementById('rank').innerHTML = 'Approximate rank: '+json[name]['rank_12_12']
+								document.getElementById('username').innerHTML = 'Username: '+name
+								document.getElementById('score').innerHTML = 'Approximate Score: '+json[name]['score_12_12']
+								document.getElementById('rank').innerHTML = 'Approximate Rank: '+json[name]['rank_12_12']
+								for (let i=1;i<9;i++){
+									document.getElementById('Movie '+i.toString()).innerHTML = json[name]['Movie '+i.toString()]
+								}
+								document.getElementById('')
 							} catch(error) {
 								document.getElementById('username').innerHTML = 'Could not find your username.'
+								document.getElementById('score').innerHTML = ''
+								document.getElementById('rank').innerHTML = ''
 							}
 						} catch(error){
 							console.error(error.message);
