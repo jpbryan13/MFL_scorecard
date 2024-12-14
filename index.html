@@ -65,9 +65,11 @@
 										throw new Error(`Response status: ${response.status}`)
 									}
 									const json_s = await response_2.json()
+									console.log(json_s)
 									for (let i=1;i<9;i++){
 										var movie_title = json[name]['Movie '+i.toString()]
 										document.getElementById('Movie '+i.toString()).innerHTML = json[name][movie_title]
+										console.log('test')
 										document.getElementById('Movie '+i.toString()+ 'score').innerHTML = json_s[movie_title]['Total Points']
 									}
 								} catch(error){
