@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		</head>
+		<body>
+				<h2>Vulture Movie Fantasy League Scorecard</h2>
+				This page gives a current estimate and breakdown of your Vulture MFL score, listing all sources of points by film. Due to minor errors, this may not be exactly the same as the score listed on the official MFL website.
+				<form>
+						<label for="uname">Username:</label>
+						<input type="text" id="uname">
+						<button type="button" onclick="changeScore(document.getElementById('uname').value)">Submit</button>
+				</form>
+				<p id='score'></p>
+				<script>
+					function changeScore(name){
+						document.getElementById('score').innerHTML = name
+					}
+				</script>
+				<script>
+					document.getElementById('score').innerHTML = 'hello'
+				</script>
+
+		</body>
+</html>
