@@ -68,14 +68,15 @@
 									console.log(json_s)
 									for (let i=1;i<9;i++){
 										var movie_title = json[name]['Movie '+i.toString()]
+										console.log(movie_title)
 										document.getElementById('Movie '+i.toString()).innerHTML = json[name][movie_title]
 										console.log(json_s[movie_title]['Total Points'])
 										var movie_score_str = 'Movie '+i.toString()+' score'
 										console.log(movie_score_str)
-										document.getElementById(movie_score_str).innerHTML = 50
+										document.getElementById(movie_score_str).innerHTML = json_s[movie_title]['Total Points']
 									}
 								} catch(error){
-									document.getElementById('Movie 1').innerHTML = 'Could Not Load Scorecard'
+									console.error(error.message)
 								}
 							} catch(error) {
 								document.getElementById('username').innerHTML = 'Could not find your username.'
