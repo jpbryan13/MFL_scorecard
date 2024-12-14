@@ -64,7 +64,7 @@
 									if(!response.ok){
 										throw new Error(`Response status: ${response.status}`)
 									}
-									const json_s = await response_2.json()
+									const json_s = await response_2
 									console.log(json_s)
 									for (let i=1;i<9;i++){
 										document.getElementById('Movie '+i.toString()).innerHTML = json[name]['Movie '+i.toString()].trim()
