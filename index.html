@@ -13,7 +13,7 @@
 				<p id='score'>hello</p>
 				<script>
 					async function changeScore(name){
-						const url = "https://github.com/jpbryan13/MFL_scorecard/blob/main/mfl_rosters.json"
+						const url = "./mfl_rosters.json"
 						try {
 							const response = await fetch(url)
 							if(!response.ok){
