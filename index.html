@@ -20,7 +20,7 @@
 								throw new Error(`Response status: ${response.status}`);
 							}
 							const json = await response.json()
-							console.log(json.TroyMyers)
+							console.log(json[name])
 						} catch(error){
 							console.error(error.message);
 						}
