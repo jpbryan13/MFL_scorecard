@@ -68,7 +68,7 @@
 									console.log(json_s)
 									for (let i=1;i<9;i++){
 										document.getElementById('Movie '+i.toString()).innerHTML = json[name]['Movie '+i.toString()].trim()
-										console.log(json_s[json[name]['Movie '+i.toString()]]['Total Points'])
+										console.log(json_s[json[name]['Movie '+i.toString()].trim()]['Total Points'])
 										document.getElementById('Movie '+i.toString()+' score').innerHTML = json_s[json[name]['Movie '+i.toString()].trim()]['Total Points']
 									}
 								} catch(error){
