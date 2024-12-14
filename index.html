@@ -21,7 +21,7 @@
 							}
 							const json = await response.json()
 							try {
-								document.getElementById('score') = json[name]["score_12_12"]
+								document.getElementById('score') = json[name]
 							} catch(error) {
 								console.log('could not find your username.')
 							}
