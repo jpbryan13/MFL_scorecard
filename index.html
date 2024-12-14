@@ -70,7 +70,7 @@
 										var movie_title = json[name]['Movie '+i.toString()]
 										document.getElementById('Movie '+i.toString()).innerHTML = json[name][movie_title]
 										console.log(json_s[movie_title]['Total Points'])
-										document.getElementById('Movie '+i.toString()+ 'score').innerHTML = json_s[movie_title]['Total Points']
+										document.getElementById('Movie '+i.toString()+'score').innerHTML = 50
 									}
 								} catch(error){
 									document.getElementById('Movie 1').innerHTML = 'Could Not Load Scorecard'
