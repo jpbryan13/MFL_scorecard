@@ -10,18 +10,17 @@
 						<input type="text" id="uname">
 						<button type="button" onclick="changeScore(document.getElementById('uname').value)">Submit</button>
 				</form>
-				<p id='score'></p>
+				<p id='score'>hello</p>
 				<script>
 					function changeScore(name){
 						const xhttp = new XMLHttpRequest();
 						xhttp.onload = function(name){
-
+							const roster = JSON.parse(this.responseText)
+							document.getElementById('score') = roster[0]
 						}
-						xhttp.open("GET","mfl_rosters.csv")
+						xhttp.open("GET","mfl_rosters.json")
+						xhttp.send()
 					}
-				</script>
-				<script>
-					document.getElementById('score').innerHTML = 'hello'
 				</script>
 
 		</body>
