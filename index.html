@@ -10,7 +10,9 @@
 						<input type="text" id="uname">
 						<button type="button" onclick="changeScore(document.getElementById('uname').value)">Submit</button>
 				</form>
-				<p id='score'>hello</p>
+				<h2 id='username'></h2>
+				<h3 id='score'></h3>
+				<h3 id='rank'></h3>
 				<script>
 					async function changeScore(name){
 						const url = "./mfl_rosters.json"
@@ -22,9 +24,11 @@
 							const json = await response.json()
 							try {
 								console.log(json[name])
-								document.getElementById('score').innerHTML = json[name]['score_12_12']
+								document.getElementById('username').innerHTML = 'Username: '+json[name]
+								document.getElementById('score').innerHTML = 'Approximate score: '+json[name]['score_12_12']
+								document.getElementById('rank').innerHTML = 'Approximate rank: '+json[name]['rank_12_12']
 							} catch(error) {
-								console.log('could not find your username.')
+								document.getElementById('username').innerHTML = 'Could not find your username.'
 							}
 						} catch(error){
 							console.error(error.message);
