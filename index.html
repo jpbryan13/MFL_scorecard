@@ -60,13 +60,13 @@
 								document.getElementById('score').innerHTML = 'Approximate Score: '+json[name]['score_12_12']
 								document.getElementById('rank').innerHTML = 'Approximate Rank: '+json[name]['rank_12_12']
 								try {
-									const response = await fetch(url_s)
+									const response_2 = await fetch(url_s)
 									if(!response.ok){
 										throw new Error(`Response status: ${response.status}`)
 									}
 									const json_s = await response.json()
 									for (let i=1;i<9;i++){
-										const movie_title = json[name]['Movie '+i.toString()]
+										var movie_title = json[name]['Movie '+i.toString()]
 										document.getElementById('Movie '+i.toString()).innerHTML = json[name][movie_title]
 										document.getElementById('Movie '+i.toString()+ 'score').innerHTML = json_s[movie_title]['Total Points']
 									}
