@@ -71,6 +71,7 @@
 										console.log(json[name]['Movie '+i.toString()].trim())
 										console.log(json_s[json[name]['Movie '+i.toString()].trim()]["52"]['score'])
 										document.getElementById('Movie '+i.toString()+' score').innerHTML = json_s[json[name]['Movie '+i.toString()].trim()]["52"]['score']
+										document.getElementById('Movie '+i.toString()+' breakdown').innerHTML = ''
 										for (let j=0;j<52;j++){
 											console.log(j)
 											var score_j = json_s[json[name]['Movie '+i.toString()].trim()][j.toString()]['score']
