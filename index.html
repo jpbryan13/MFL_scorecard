@@ -75,7 +75,12 @@
 											console.log(j)
 											var score_j = json_s[json[name]['Movie '+i.toString()].trim()][j.toString()]['score']
 											var name_j = json_s[json[name]['Movie '+i.toString()].trim()][j.toString()]['name']
-											document.getElementById('Movie '+i.toString()+' breakdown').innerHTML+=name_j+': '+score_j+'\n'
+											if (score_j!=0){
+												if(score_j!='null'){
+													document.getElementById('Movie '+i.toString()+' breakdown').innerHTML+=name_j+': '+score_j+'\n'
+												}
+											}
+											
 										} 
 									}
 								} catch(error){
