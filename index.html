@@ -71,11 +71,12 @@
 										console.log(json[name]['Movie '+i.toString()].trim())
 										console.log(json_s[json[name]['Movie '+i.toString()].trim()]["52"]['score'])
 										document.getElementById('Movie '+i.toString()+' score').innerHTML = json_s[json[name]['Movie '+i.toString()].trim()]["52"]['score']
-										for (let j=0;j<52;j++)
+										for (let j=0;j<52;j++){
 											console.log(j)
 											var score_j = json_s[json[name]['Movie '+i.toString()].trim()][j.toString()]['score']
 											var name_j = json_s[json[name]['Movie '+i.toString()].trim()][j.toString()]['name']
-											document.getElementById('Movie '+i.toString()+' breakdown').innerHTML+=name_j+': '+score_j+'\n' 
+											document.getElementById('Movie '+i.toString()+' breakdown').innerHTML+=name_j+': '+score_j+'\n'
+										} 
 									}
 								} catch(error){
 									console.error(error.message)
