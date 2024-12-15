@@ -35,14 +35,14 @@
 						<td id='Movie 8 score'></td>
 					</tr>
 					<tr>
-						<td id='Movie 1 breakdown'></td>
-						<td id='Movie 2 breakdown'></td>
-						<td id='Movie 3 breakdown'></td>
-						<td id='Movie 4 breakdown'></td>
-						<td id='Movie 5 breakdown'></td>
-						<td id='Movie 6 breakdown'></td>
-						<td id='Movie 7 breakdown'></td>
-						<td id='Movie 8 breakdown'></td>
+						<td id='Movie 1 breakdown' vertical-align: top></td>
+						<td id='Movie 2 breakdown' vertical-align: top></td>
+						<td id='Movie 3 breakdown' vertical-align: top></td>
+						<td id='Movie 4 breakdown' vertical-align: top></td>
+						<td id='Movie 5 breakdown' vertical-align: top></td>
+						<td id='Movie 6 breakdown' vertical-align: top></td>
+						<td id='Movie 7 breakdown' vertical-align: top></td>
+						<td id='Movie 8 breakdown' vertical-align: top></td>
 					</tr>
 				<script>
 					async function changeScore(name){
@@ -70,7 +70,7 @@
 										document.getElementById('Movie '+i.toString()).innerHTML = json[name]['Movie '+i.toString()].trim()
 										console.log(json[name]['Movie '+i.toString()].trim())
 										console.log(json_s[json[name]['Movie '+i.toString()].trim()]["52"]['score'])
-										document.getElementById('Movie '+i.toString()+' score').innerHTML = json_s[json[name]['Movie '+i.toString()].trim()]["52"]['score']
+										document.getElementById('Movie '+i.toString()+' score').innerHTML = 'Total Score: '+json_s[json[name]['Movie '+i.toString()].trim()]["52"]['score']
 										document.getElementById('Movie '+i.toString()+' breakdown').innerHTML = ''
 										for (let j=0;j<52;j++){
 											console.log(j)
