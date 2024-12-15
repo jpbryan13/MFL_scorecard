@@ -77,7 +77,8 @@
 											var name_j = json_s[json[name]['Movie '+i.toString()].trim()][j.toString()]['name']
 											if (score_j!=0){
 												if(score_j!='null'){
-													document.getElementById('Movie '+i.toString()+' breakdown').innerHTML+=name_j+': '+score_j+'\n'
+													document.getElementById('Movie '+i.toString()+' breakdown').innerHTML+=name_j+': '+score_j
+													document.getElementById('Movie '+i.toString()+' breakdown').innerHTML+=<br>
 												}
 											}
 											
