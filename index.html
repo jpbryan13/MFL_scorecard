@@ -69,7 +69,7 @@
 									for (let i=1;i<9;i++){
 										document.getElementById('Movie '+i.toString()).innerHTML = json[name]['Movie '+i.toString()].trim()
 										console.log(json[name]['Movie '+i.toString()].trim())
-										console.log(json_s[json[name]['Movie '+i.toString()].trim()]['Total Points'])
+										console.log(json_s[json[name]['Movie '+i.toString()].trim()][59]['score'])
 										document.getElementById('Movie '+i.toString()+' score').innerHTML = json_s[json[name]['Movie '+i.toString()].trim()][59]['score']
 										document.getElementById('Movie '+i.toString()+' breakdown').innerHTML = json_s[json[name]]['Movie '+i.toString().trim()][0]['score']
 									}
